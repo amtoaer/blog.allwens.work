@@ -1,10 +1,13 @@
-mixin postInfo(item)
+mixin postInfo(item,flag)
     .post-info
         a
         != full_date(item.date, config.date_format)
         if item.from && (is_home() || is_post())
             a.post-from(href=item.from, target='_blank', title=item.from)
                 != __('translate_original')
+        span(id=url_for(item.path),class="leancloud_visitors" data-flag-title=item.title)
+            span.leancloud-visitors-count
+            != ' views'
 
 mixin postTitle(title)
     if title

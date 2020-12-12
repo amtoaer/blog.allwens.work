@@ -12,8 +12,12 @@ menu:
 favicon: /favicon.svg
 logo: /logo.svg
 
-# Disqus shortname
-disqus:
+# Valine
+valine: true
+appID: 6PQcTkHfheSIKOymTCUbiDsc-MdYXbMMI
+appKey: wfyWbG3H3Yxfwq2KLiphW0NI
+placeHolder: ''
+visitor: true
 
 # Analytics
 google_analytics:

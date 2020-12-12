@@ -11,6 +11,39 @@ if theme.google_analytics
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
 script(src='https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js')
+if theme.valine
+    script.
+        var appID = '#{theme.appID}';
+        var appKey = '#{theme.appKey}';
+        var placeHolder = '#{theme.placeHolder}';
+        var visitor = #{theme.visitor};
+        (function () {
+            var dsq = document.createElement('script'); dsq.async = false;
+            dsq.src = 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            dsq.onload = ()=>{
+                new Valine({
+                    el: '#vcomment',
+                    appId: appID,
+                    appKey: appKey,
+                    path: window.location.pathname,
+                    placeholder: placeHolder,
+                    visitor: visitor
+                });
+            }
+        })();
+        Barba.Dispatcher.on('newPageReady',()=>{
+            if (document.getElementById('vcomment')!==null && typeof Valine !== "undefined"){
+                new Valine({
+                    el: '#vcomment',
+                    appId: appID,
+                    appKey: appKey,
+                    path: window.location.pathname,
+                    placeholder: placeHolder,
+                    visitor: visitor
+                })
+            }
+        });
 script.
     document.addEventListener('DOMContentLoaded', function() {
         Barba.Pjax.start()
