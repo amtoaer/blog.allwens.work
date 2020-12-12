@@ -2,12 +2,12 @@ name: Brewski
 url: https://github.com/tiaanduplessis/hexo-theme-brewski
 
 menu:
-  Home: /
-  About: /about
-  Archives: /archives
-  Impressum: amtoaer
-  GitHub: https://github.com/amtoaer
-  RSS: /atom.xml
+  主页: /
+  归档: /archives/
+  说说: /talk/
+  留言: /comment/
+  关于: /about/
+  订阅: /atom.xml
 
 favicon: /favicon.svg
 logo: /logo.svg

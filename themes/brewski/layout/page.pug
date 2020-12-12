@@ -11,8 +11,6 @@ block container
     include mixins/post.pug
     .post
         article.post-block
-            h1.post-title
-                +postTitle(page.title)
             .post-content
                 != page.content
 
