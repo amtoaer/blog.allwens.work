@@ -104,3 +104,27 @@ theme: brewski
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+all_minifier: true
+
+html_minifier:
+  enable: true
+  ignore_error: false
+  silent: true
+  exclude:
+
+css_minifier:
+  enable: true
+  silent: true
+  exclude: 
+    - '*.min.css'
+
+js_minifier:
+  enable: true
+  mangle: true
+  silent: true
+  exclude: 
+    - '*.min.js'
+
+image_minifier:
+  enable: false

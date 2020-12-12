@@ -20,9 +20,6 @@ serverURLs: https://waline-mu.vercel.app
 placeHolder: ''
 visitor: true
 
-# Analytics
-google_analytics:
-
 # Copyright Infomation
 copyright:
   since: 2018
