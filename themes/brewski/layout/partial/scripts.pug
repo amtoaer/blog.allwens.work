@@ -10,42 +10,56 @@ if theme.google_analytics
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
+
 script(src='https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js')
+
 if theme.valine
     script.
-        var appID = '#{theme.appID}';
-        var appKey = '#{theme.appKey}';
-        var placeHolder = '#{theme.placeHolder}';
-        var visitor = #{theme.visitor};
+        var loadMiniValine = ()=>{
+            new MiniValine({
+                el: '.vcomment',
+                backend: 'waline',
+                serverURLs: '#{theme.serverURLs}',
+                placeholder: '#{theme.placeHolder}',
+                pathname: location.pathname,
+                enableFlag: true,
+                master: ['355f38b55f4638b743287836ea933e6d'],
+                friends: [],
+                visitor: #{theme.visitor},
+                enableUA: true,
+                tagMeta: ["博主", "朋友", "访客"]
+            });
+        }
+
         (function () {
             var dsq = document.createElement('script'); dsq.async = false;
-            dsq.src = 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js';
+            dsq.src = 'https://cdn.jsdelivr.net/npm/minivaline@latest/dist/MiniValine.min.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            dsq.onload = ()=>{
-                new Valine({
-                    el: '#vcomment',
-                    appId: appID,
-                    appKey: appKey,
-                    path: window.location.pathname,
-                    placeholder: placeHolder,
-                    visitor: visitor
-                });
-            }
+            dsq.onload = loadMiniValine
         })();
-        Barba.Dispatcher.on('newPageReady',()=>{
-            if (document.getElementById('vcomment')!==null && typeof Valine !== "undefined"){
-                new Valine({
-                    el: '#vcomment',
-                    appId: appID,
-                    appKey: appKey,
-                    path: window.location.pathname,
-                    placeholder: placeHolder,
-                    visitor: visitor
-                })
-            }
-        });
+
 script.
+    var timer = null;
     document.addEventListener('DOMContentLoaded', function() {
         Barba.Pjax.start()
     })
+    Barba.Dispatcher.on('newPageReady',()=>{
+        clearInterval(timer);
+        timer = setInterval(function () {
+            var top = document.body.scrollTop || document.documentElement.scrollTop;
+            var speed = top / 4;
+            if (document.body.scrollTop!=0) {
+                document.body.scrollTop -= speed;
+            }else {
+                document.documentElement.scrollTop -= speed;
+            }
+            if (top == 0) {
+                clearInterval(timer);
+            }
+        }, 30); 
+
+        if (document.querySelectorAll(".vcomment")[0] && typeof MiniValine !== "undefined"){
+            loadMiniValine()
+        }
+    });
     

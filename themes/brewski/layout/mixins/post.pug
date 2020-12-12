@@ -5,9 +5,10 @@ mixin postInfo(item,flag)
         if item.from && (is_home() || is_post())
             a.post-from(href=item.from, target='_blank', title=item.from)
                 != __('translate_original')
-        span(id=url_for(item.path),class="leancloud_visitors" data-flag-title=item.title)
-            span.leancloud-visitors-count
-            != ' views'
+        if flag
+            span(id=url_for(item.path),class="leancloud_visitors")
+                span.leancloud-visitors-count
+                != ' views'
 
 mixin postTitle(title)
     if title
@@ -24,7 +25,7 @@ mixin posts()
                     h2.post-title
                         a.post-title-link(href=url_for(item.path) class="no-barba")
                             +postTitle(item.title)
-                    +postInfo(item)
+                    +postInfo(item,false)
                     .post-content
                         != item.excerpt
                     a.read-more(href=url_for(item.path))
@@ -44,7 +45,7 @@ mixin postList()
                 h2.archive-year
                     != year
             .post-item
-                +postInfo(item)
+                +postInfo(item,false)
                 a.post-title-link(href=url_for(item.path))
                     +postTitle(item.title)
         - })
@@ -57,6 +58,6 @@ mixin post(item)
         article.post-block
             h1.post-title
                 +postTitle(item.title)
-            +postInfo(item)
+            +postInfo(item,true)
             .post-content
                 != item.content
