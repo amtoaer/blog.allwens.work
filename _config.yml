@@ -104,3 +104,9 @@ theme: brewski
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+sitemap:
+  path: sitemap.xml
+  rel: false
+  tags: false
+  categories: false
