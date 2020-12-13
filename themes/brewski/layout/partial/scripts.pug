@@ -26,13 +26,45 @@ if theme.valine
         })();
 
 script.
-    var timer = null;
+    var scrollTimer = null;
+    var progressTimer = null;
+    var loadingBar = document.querySelector(".loading-bar");
+    var progress = document.querySelector(".loading-bar .progress");
+
     document.addEventListener('DOMContentLoaded', function() {
         Barba.Pjax.start()
     })
-    Barba.Dispatcher.on('newPageReady',()=>{
-        clearInterval(timer);
-        timer = setInterval(function () {
+
+    Barba.Dispatcher.on('linkClicked',()=>{
+
+        var loadingBarWidth = 20;
+        var MAX_LOADING_WIDTH = 95;
+
+        loadingBar.classList.add("loading");
+        progress.style.width = loadingBarWidth + "%";
+
+        clearInterval(progressTimer);
+        progressTimer = setInterval(()=> {
+            loadingBarWidth += 5;
+            if (loadingBarWidth > MAX_LOADING_WIDTH) {
+            loadingBarWidth = MAX_LOADING_WIDTH;
+            }
+            progress.style.width = loadingBarWidth + "%";
+        }, 500);
+    })
+
+    Barba.Dispatcher.on('transitionCompleted',()=>{
+        clearInterval(progressTimer);
+
+        progress.style.width = "100%";
+        loadingBar.classList.remove("loading");
+
+        setTimeout(()=> {
+            progress.style.width = 0;
+        }, 400);
+
+        clearInterval(scrollTimer);
+        scrollTimer = setInterval(function () {
             var top = document.body.scrollTop || document.documentElement.scrollTop;
             var speed = top / 4;
             if (document.body.scrollTop!=0) {
@@ -41,7 +73,7 @@ script.
                 document.documentElement.scrollTop -= speed;
             }
             if (top == 0) {
-                clearInterval(timer);
+                clearInterval(scrollTimer);
             }
         }, 30); 
 
