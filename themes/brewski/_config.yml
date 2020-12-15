@@ -13,12 +13,16 @@ favicon: /favicon.svg
 logo: /logo.svg
 
 # Valine
-valine: true
-appID: 6PQcTkHfheSIKOymTCUbiDsc-MdYXbMMI
-appKey: wfyWbG3H3Yxfwq2KLiphW0NI
-serverURLs: https://waline-mu.vercel.app
-placeHolder: ''
-visitor: true
+valine:
+  appID: 6PQcTkHfheSIKOymTCUbiDsc-MdYXbMMI
+  appKey: wfyWbG3H3Yxfwq2KLiphW0NI
+  serverURLs: https://waline-mu.vercel.app
+  placeHolder: ''
+  visitor: true
+
+artitalk:
+  appID: 'BB47PurCV8enSBEjrXL7RSmz-MdYXbMMI'
+  appKey: 'MwwGckMof2je5drCC3AnFtjw'
 
 # Copyright Infomation
 copyright:

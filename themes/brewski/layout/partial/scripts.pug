@@ -1,29 +1,43 @@
 script(src='https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js')
 
-if theme.valine
-    script.
-        var loadMiniValine = ()=>{
-            new MiniValine({
-                el: '#vcomment',
-                backend: 'waline',
-                serverURLs: '#{theme.serverURLs}',
-                placeholder: '#{theme.placeHolder}',
-                pathname: location.pathname,
-                enableFlag: true,
-                master: ['355f38b55f4638b743287836ea933e6d','dc76a8e319ef552e77d549f0e101eba2'],
-                friends: ['42dfe9021370e676c75bd44d51997086'],
-                visitor: #{theme.visitor},
-                enableUA: true,
-                tagMeta: ["博主", "朋友", "访客"]
-            });
-        }
+script.
+    var loadMiniValine = ()=>{
+        new MiniValine({
+            el: '#vcomment',
+            backend: 'waline',
+            serverURLs: '#{theme.valine.serverURLs}',
+            placeholder: '#{theme.valine.placeHolder}',
+            pathname: location.pathname,
+            enableFlag: true,
+            master: ['355f38b55f4638b743287836ea933e6d','dc76a8e319ef552e77d549f0e101eba2'],
+            friends: ['42dfe9021370e676c75bd44d51997086'],
+            visitor: #{theme.valine.visitor},
+            enableUA: true,
+            tagMeta: ["博主", "朋友", "访客"]
+        });
+    }
 
-        (function () {
-            var dsq = document.createElement('script'); dsq.async = true;
-            dsq.src = 'https://cdn.jsdelivr.net/npm/minivaline@latest/dist/MiniValine.min.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            dsq.onload = loadMiniValine
-        })();
+    var loadArtitalk = ()=>{
+        new Artitalk({
+            appId: '#{theme.artitalk.appID}',
+            appKey: '#{theme.artitalk.appKey}',
+        })
+    }
+
+    (function () {
+        var valine = document.createElement('script'); valine.async = true;
+        var artitalk = document.createElement('script');artitalk.async = true;
+        valine.src = 'https://cdn.jsdelivr.net/npm/minivaline@latest/dist/MiniValine.min.js';
+        artitalk.src = 'https://cdn.jsdelivr.net/npm/artitalk';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(valine);
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(artitalk);
+        if (document.getElementById("vcomment")!==null){
+            valine.onload = loadMiniValine
+        }
+        if (document.getElementById('artitalk_main')!==null){
+            artitalk.onload = loadArtitalk
+        }
+    })();
 
 script.
     var scrollTimer = null;
@@ -79,6 +93,9 @@ script.
 
         if (document.getElementById("vcomment")!==null && typeof MiniValine !== "undefined"){
             loadMiniValine()
+        }
+        if (document.getElementById('artitalk_main')!==null && typeof Artitalk !== "undefined"){
+            loadArtitalk()
         }
     });
     
