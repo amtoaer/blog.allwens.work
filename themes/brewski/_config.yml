@@ -14,8 +14,6 @@ logo: /logo.svg
 
 # Valine
 valine:
-  appID: 6PQcTkHfheSIKOymTCUbiDsc-MdYXbMMI
-  appKey: wfyWbG3H3Yxfwq2KLiphW0NI
   serverURLs: https://waline-mu.vercel.app
   placeHolder: ''
   visitor: true
