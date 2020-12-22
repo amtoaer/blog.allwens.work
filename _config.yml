@@ -110,3 +110,35 @@ sitemap:
   rel: false
   tags: false
   categories: false
+
+pwa:
+  manifest:
+    path: /manifest.json
+    body:
+      name: Hoar
+      short_name: Hoar
+      icons:
+        - src: /images/favicon-240x240.png
+          sizes: 240x240
+          type: image/png
+        - src: /images/favicon-640x640.png
+          sizes: 640x640
+          type: image/png
+      start_url: /index.html
+      theme_color: '#9e1900'
+      background_color: '#ffffff'
+      display: standalone
+  serviceWorker:
+    path: /sw.js
+    preload:
+      urls:
+        - /
+      posts: 5
+    opts:
+      networkTimeoutSeconds: 5
+    routes:
+      - pattern: !!js/regexp /.*\.(js|css|jpg|jpeg|png|gif|svg)$/
+        strategy: cacheFirst
+      - pattern: !!js/regexp /\//
+        strategy: networkFirst
+  priority: 5
