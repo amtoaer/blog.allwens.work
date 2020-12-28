@@ -7,7 +7,6 @@ menu:
   说说: /talk/
   留言: /comment/
   关于: /about/
-  订阅: /atom.xml
 
 favicon: /favicon.svg
 logo: /logo.svg
