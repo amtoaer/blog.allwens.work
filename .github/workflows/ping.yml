@@ -1,0 +1,15 @@
+name: ping-google
+on:
+  push:
+    branches:
+      - master
+jobs:
+  ping-google:
+    if: "contains(github.event.head_commit.message, '更新博文')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: wait for build
+        run: sleep 3m
+      - name: ping google to update sitemap.xml
+        run: curl http://www.google.com/ping?sitemap=https://blog.allwens.work/sitemap.xml
+
