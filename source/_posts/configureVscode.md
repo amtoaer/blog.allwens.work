@@ -23,8 +23,10 @@ categories: 便捷使用
 
 > ~~*甭管写啥， vscode 一把梭！*~~
 
-下面贴一张我的 vscode 截图：
+下面贴两张我的 vscode 截图：
 ![](https://rmt.dogedoge.com/fetch/allwens-work/storage/pic_1610690634182.png)  
+
+![20210116142414](https://rmt.dogedoge.com/fetch/allwens-work/storage/20210116142414.png)
 
 ## 配置
 
@@ -36,7 +38,7 @@ categories: 便捷使用
 
 1. Sarasa Gothic
 
-又被称为更纱黑体，是我个人最喜欢的字体，也是我 vscode 编辑区域使用的字体。比起后面纯粹的编程字体，它的独特之处是使用思源黑体补齐了 CJK 字库，使字体整体更加协调。（它的纯英文版字体叫做 Iosevka ）
+又被称为更纱黑体，是我个人最喜欢的字体，也是我 vscode 编辑区域使用的字体。比起后面纯粹的编程字体，其独特之处是使用思源黑体补齐了 CJK 字库，使字体整体更加协调。（这个字体的纯英文版叫做 Iosevka ）
 
 ![](https://rmt.dogedoge.com/fetch/allwens-work/storage/preview-all.png)
 
