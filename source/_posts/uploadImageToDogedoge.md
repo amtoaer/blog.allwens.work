@@ -1,8 +1,10 @@
 ---
 title: vscode 粘贴图片自动上传到多吉图床
 date: 2020-12-29 11:04:57
-tags: ['图床']
+tags: ['image']
 ---
+
+> 该文章的解决方法有些问题，推荐使用[更完美的方法](https://blog.allwens.work/uploadImageToDogedogeViaPicgo/)。
 
 最近有听说一个限时免费的[多吉图床](https://v2ex.com/t/659652)，支持大陆 CDN 和高性能的实时裁剪功能，我也给作者发了一封邮件尝试申请了一下，大概过了两三天通过了。
 
