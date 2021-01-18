@@ -72,5 +72,5 @@ picgo use uploader
 
 | OS           | Uploading an image from clipboard | Uploading images from explorer | Uploading an image from input box |
 | ------------ | --------------------------------- | ------------------------------ | --------------------------------- |
-| Windows/Unix | `Ctrl`+`Alt`+`U`                  | `Ctrl`+`Alt`+`E`               | `Ctrl`+`Alt`+`O`                  |
-| Os X         | `Cmd`+`Opt`+`U`                   | `Cmd`+`Opt`+`E`                | `Cmd`+`Opt`+`O`                   |
+| Windows/Unix | Ctrl + Alt + U                    | Ctrl + Alt + E                 | Ctrl + Alt + O                    |
+| Os X         | Cmd + Opt + U                     | Cmd + Opt + E                  | Cmd + Opt + O                     |
