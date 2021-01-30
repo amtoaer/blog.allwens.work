@@ -47,7 +47,7 @@ export XMODIFIERS=@im=fcitx5
 
 1. 通过桌面环境的自启设置添加`fcitx5`（以kde为例）：
 
-   ![image-20200817131136167](https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/image-20200817131136167.png)
+   ![image-20200817131136167](https://rmt.dogedoge.com/fetch/allwens-work/storage/image-20200817131136167.png)
 
 2. 执行以下命令：
 
@@ -57,7 +57,7 @@ export XMODIFIERS=@im=fcitx5
 
 接着重启电脑，在`fcitx5配置`中添加所需要的输入法即可（一般用户请选择Pinyin）：
 
-![image-20200817133730806](https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/image-20200817133730806.png)
+![image-20200817133730806](https://rmt.dogedoge.com/fetch/allwens-work/storage/image-20200817133730806.png)
 
 ## 皮肤
 
@@ -71,7 +71,7 @@ sudo pacman -S fcitx5-material-color
 
 KDE用户可通过`设置 -> 区域设置 -> 输入法 -> 配置附加组件 -> Classic User Inteface -> 主题` 切换：
 
-![image-20200817132911314](https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/image-20200817132911314.png)
+![image-20200817132911314](https://rmt.dogedoge.com/fetch/allwens-work/storage/image-20200817132911314.png)
 
 ## 词库
 
@@ -86,7 +86,7 @@ KDE用户可通过`设置 -> 区域设置 -> 输入法 -> 配置附加组件 -> 
 
 - 对于 KDE 用户来说，可以通过 `设置 -> 区域设置 -> 输入法 -> Pinyin -> 词典 -> 导入` 来导入搜狗词库。
 
-  ![image-20200817134015025](https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/image-20200817134015025.png)
+  ![image-20200817134015025](https://rmt.dogedoge.com/fetch/allwens-work/storage/image-20200817134015025.png)
 
 - 对于其他用户，需要手动打开 “Fcitx5 配置” 这个软件，并在拼音输入法中手动配置。
 

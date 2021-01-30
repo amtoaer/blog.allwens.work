@@ -42,7 +42,7 @@ return result;
 
 #### 示意图
 
-![photo_2020-09-18_17-26-52](https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/photo_2020-09-18_17-26-52.jpg)
+![photo_2020-09-18_17-26-52](https://rmt.dogedoge.com/fetch/allwens-work/storage/photo_2020-09-18_17-26-52.jpg)
 
 #### 代码实现
 
@@ -153,7 +153,7 @@ return map.get(target);
 
 #### 示意图
 
-![photo_2020-09-18_18-33-27](https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/photo_2020-09-18_18-33-27.jpg)
+![photo_2020-09-18_18-33-27](https://rmt.dogedoge.com/fetch/allwens-work/storage/photo_2020-09-18_18-33-27.jpg)
 
 #### 代码实现（包含输入输出，上文的String[]使用List&lt;String&gt;代替）
 

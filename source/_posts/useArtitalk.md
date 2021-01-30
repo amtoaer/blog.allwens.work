@@ -50,11 +50,11 @@ description: artitalk 2.4.x 在pjax网站的使用方法及美化过程
 
 2. 将原来valine应用中的`Comment`和`Counter` class导出（*吐槽一句：为什么只能在中午十二点前导出啊！维护用得着整整半天吗？！*）
 
-   ![image-20200827151353004](https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/image-20200827151353004.png)
+   ![image-20200827151353004](https://rmt.dogedoge.com/fetch/allwens-work/storage/image-20200827151353004.png)
 
 3. 将导出的`Comment`和`Counter ` class导入到artitalk使用的应用中
 
-   ![image-20200827151808051](https://allwens-work.oss-cn-beijing.aliyuncs.com/bed/image-20200827151808051.png)
+   ![image-20200827151808051](https://rmt.dogedoge.com/fetch/allwens-work/storage/image-20200827151808051.png)
 
 4. 将配置文件中valine使用的ID和Key改成和artitalk相同的。
 
@@ -75,8 +75,6 @@ git clone https://github.com/ArtitalkJS/Artitalk
 cd Artitalk
 git checkout 1df35c9
 ```
-
-~~有一说一，感觉这个项目有点乱。所有操作基本都在master分支，甚至使用github actions往master里push...~~
 
 #### 加入对当前所处页面的判断
 
