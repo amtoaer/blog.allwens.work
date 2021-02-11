@@ -1,5 +1,5 @@
 ---
-title: friends
+title: 友链
 date: 2021-02-11 14:27:43
 type: 友链
 friends:
