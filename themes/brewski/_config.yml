@@ -5,6 +5,7 @@ menu:
   主页: /
   归档: /archives/
   说说: /talk/
+  友链: /friends/
   留言: /comment/
   关于: /about/
 
@@ -14,12 +15,12 @@ logo: /logo.svg
 # Valine
 valine:
   serverURLs: https://waline-mu.vercel.app
-  placeHolder: ''
+  placeHolder: ""
   visitor: true
 
 artitalk:
-  appID: 'BB47PurCV8enSBEjrXL7RSmz-MdYXbMMI'
-  appKey: 'MwwGckMof2je5drCC3AnFtjw'
+  appID: "BB47PurCV8enSBEjrXL7RSmz-MdYXbMMI"
+  appKey: "MwwGckMof2je5drCC3AnFtjw"
 
 # Copyright Infomation
 copyright:

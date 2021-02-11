@@ -12,7 +12,24 @@ block container
     .post
         article.post-block
             .post-content
-                != page.content
+                if page.type==='友链'
+                    h3
+                        = '我的友链'
+                    each friend in page.friends
+                        a(target='_blank',href=friend.url,title=friend.name,class='friendurl')
+                            .frienddiv 
+                                .frienddivleft 
+                                    img(class='myfriend',src=friend.img)
+                                .frienddivright 
+                                    .friendname 
+                                        =friend.name
+                                    .friendinfo 
+                                        =friend.desc
+                    != page.content
+                    include partial/comment.pug
+                else 
+                    != page.content
+
 
 block copyright
     include partial/copyright.pug
