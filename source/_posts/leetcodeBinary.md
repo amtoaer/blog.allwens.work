@@ -38,7 +38,7 @@ func singleNumber(nums []int) int {
 
 进一步阐述上一道题的情况，设数字被记录下来为1，数字未被记录为0,通过异或运算，我们满足了：
 
-![Digraph.gv](https://rmt.dogedoge.com/fetch/allwens-work/storage/Digraph.gv.jpg)
+![binary](https://rmt.dogedoge.com/fetch/allwens-work/storage/binary.jpeg)
 
 因此出现两次的数字全部被抵消，最后剩下的是出现一次数字的记录状态，即为结果。
 
