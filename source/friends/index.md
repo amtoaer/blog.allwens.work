@@ -28,6 +28,11 @@ friends:
         img: //cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/friends/neboer.jpg
         name: Neboer
         desc: Neboer's Blog isn't Only About Tech!
+    - 
+        url: https://nwn.moe/
+        img: //cdn.jsdelivr.net/gh/nwntech/nwn-blog-archives@archives/img/me.jpg
+        name: Cpt. Huntsman
+        desc: NwN Technology
 
 ---
 
