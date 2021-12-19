@@ -33,6 +33,11 @@ friends:
         img: //cdn.jsdelivr.net/gh/nwntech/nwn-blog-archives@archives/me.jpg
         name: Cpt. Huntsman
         desc: NwN Technology
+    - 
+        url: https://yl4869.github.io/
+        img: //cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/friends/yunlang.jpg
+        name: 云狼
+        desc: fun forever
 
 ---
 
