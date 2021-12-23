@@ -28,4 +28,4 @@ title: 关于
 ### 联系方式
 
 + [E-mail](mailto:amtoaer@gmail.com)
-+ [Telegram](https://t.me/jeasonlau)
++ [Telegram](https://t.me/amtoaer)
