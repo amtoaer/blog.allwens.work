@@ -38,6 +38,11 @@ friends:
         img: //cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/friends/yunlang.jpg
         name: 云狼
         desc: fun forever
+    - 
+        url: http://www.yangbaixin.icu/
+        img: //cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/basic/favicon.ico
+        name: ybx’s blog
+        desc: 即使天无雨，我亦留此地
 
 ---
 
