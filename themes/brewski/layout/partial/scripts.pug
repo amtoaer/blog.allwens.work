@@ -24,10 +24,31 @@ script.
         })
     }
 
+    var scrollSmoothly = (position)=>{
+        if (!window.requestAnimationFrame) {
+            window.requestAnimationFrame = function (cb) {
+                return setTimeout(cb, 17);
+            };
+        }
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var step = function () {
+            var distance = position - scrollTop;
+            scrollTop = scrollTop + distance / 5;
+            if (Math.abs(distance) < 1) {
+                window.scrollTo(0, position);
+            } else {
+                window.scrollTo(0, scrollTop);
+                requestAnimationFrame(step);
+            }
+        };
+        step();
+    }
+
+
     (function () {
         var valine = document.createElement('script'); valine.async = true;
         var artitalk = document.createElement('script');artitalk.async = true;
-        valine.src = 'https://cdn.jsdelivr.net/npm/minivaline@5/dist/MiniValine.min.js';
+        valine.src = 'https://cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/comment.js';
         artitalk.src = 'https://cdn.jsdelivr.net/gh/amtoaer/Artitalk@test/dist/js/artitalk.min.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(valine);
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(artitalk);
@@ -39,9 +60,7 @@ script.
         }
     })();
 
-script.
-    var scrollTimer = null;
-    var progressTimer = null;
+    var progressTimer;
     var loadingBar = document.querySelector(".loading-bar");
     var progress = document.querySelector(".loading-bar .progress");
 
@@ -77,19 +96,7 @@ script.
             progress.style.width = 0;
         }, 400);
 
-        clearInterval(scrollTimer);
-        scrollTimer = setInterval(function () {
-            var top = document.body.scrollTop || document.documentElement.scrollTop;
-            var speed = top / 4;
-            if (document.body.scrollTop!=0) {
-                document.body.scrollTop -= speed;
-            }else {
-                document.documentElement.scrollTop -= speed;
-            }
-            if (top == 0) {
-                clearInterval(scrollTimer);
-            }
-        }, 30); 
+        scrollSmoothly(0)
 
         if (document.getElementById("vcomment")!==null && typeof MiniValine !== "undefined"){
             loadMiniValine()
@@ -98,4 +105,3 @@ script.
             loadArtitalk()
         }
     });
-    
