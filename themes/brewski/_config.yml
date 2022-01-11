@@ -17,6 +17,16 @@ valine:
   serverURLs: https://waline-mu.vercel.app
   placeHolder: ""
   visitor: true
+  master:
+    - "355f38b55f4638b743287836ea933e6d"
+    - "dc76a8e319ef552e77d549f0e101eba2"
+    - "4cfb55553b27e9f8551895d874355bde"
+  friends:
+    - "42dfe9021370e676c75bd44d51997086"
+  tagMeta:
+    - "博主"
+    - "朋友"
+    - "访客"
 
 artitalk:
   appID: "BB47PurCV8enSBEjrXL7RSmz-MdYXbMMI"

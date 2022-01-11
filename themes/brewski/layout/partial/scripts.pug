@@ -9,11 +9,11 @@ script.
             placeholder: '#{theme.valine.placeHolder}',
             pathname: location.pathname,
             enableFlag: true,
-            master: ['355f38b55f4638b743287836ea933e6d','dc76a8e319ef552e77d549f0e101eba2'],
-            friends: ['42dfe9021370e676c75bd44d51997086'],
+            master: !{JSON.stringify(theme.valine.master)},
+            friends: !{JSON.stringify(theme.valine.friends)},
             visitor: #{theme.valine.visitor},
             enableUA: true,
-            tagMeta: ["博主", "朋友", "访客"]
+            tagMeta: !{JSON.stringify(theme.valine.tagMeta)},
         });
     }
 
