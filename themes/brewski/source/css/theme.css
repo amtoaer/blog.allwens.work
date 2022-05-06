@@ -789,4 +789,5 @@ pre .strong {
 	--waline-theme-color: #9e1900 !important;
 	--waline-active-color: #9e1900 !important;
 	--waline-badge-color: #ae0000 !important;
+	--waline-font-size: 1.3rem !important;
   }
