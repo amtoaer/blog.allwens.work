@@ -1,20 +1,18 @@
 script(src='https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js')
 
 script.
-    var loadMiniValine = ()=>{
-        new MiniValine({
-            el: '#vcomment',
-            backend: 'waline',
-            serverURLs: '#{theme.valine.serverURLs}',
-            placeholder: '#{theme.valine.placeHolder}',
-            pathname: location.pathname,
-            enableFlag: true,
-            master: !{JSON.stringify(theme.valine.master)},
-            friends: !{JSON.stringify(theme.valine.friends)},
-            visitor: #{theme.valine.visitor},
-            enableUA: true,
-            tagMeta: !{JSON.stringify(theme.valine.tagMeta)},
-        });
+    var loadWaline = ()=>{
+        if (typeof waline !== "undefined"){
+            waline.update()
+        }else if (typeof Waline !== "undefined") {
+            const waline = Waline.init({
+                el: '#vcomment',
+                serverURL: '#{theme.valine.serverURLs}',
+                pageview:true,
+                login: 'disable',
+                copyright:false,
+            })
+        }
     }
 
     var loadArtitalk = ()=>{
@@ -48,12 +46,12 @@ script.
     (function () {
         var valine = document.createElement('script'); valine.async = true;
         var artitalk = document.createElement('script');artitalk.async = true;
-        valine.src = 'https://cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/js/comment.js';
+        valine.src = 'https://unpkg.com/@waline/client@v2/dist/waline.js';
         artitalk.src = 'https://cdn.jsdelivr.net/gh/amtoaer/Artitalk@test/dist/js/artitalk.min.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(valine);
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(artitalk);
         if (document.getElementById("vcomment")!==null){
-            valine.onload = loadMiniValine
+            valine.onload = loadWaline
         }
         if (document.getElementById('artitalk_main')!==null){
             artitalk.onload = loadArtitalk
@@ -98,8 +96,8 @@ script.
 
         scrollSmoothly(0)
 
-        if (document.getElementById("vcomment")!==null && typeof MiniValine !== "undefined"){
-            loadMiniValine()
+        if (document.getElementById("vcomment")!==null){
+            loadWaline()
         }
         if (document.getElementById('artitalk_main')!==null && typeof Artitalk !== "undefined"){
             loadArtitalk()

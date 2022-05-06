@@ -6,9 +6,8 @@ mixin postInfo(item,flag)
             a.post-from(href=item.from, target='_blank', title=item.from)
                 != __('translate_original')
         if flag
-            span(id=url_for(item.path),class="leancloud_visitors")
-                span.leancloud-visitors-count
-                != ' views'
+            span(data-path=url_for(item.path),class="waline-pageview-count")
+            != ' views'
 
 mixin postTitle(title)
     if title

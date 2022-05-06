@@ -1,7 +1,7 @@
 meta(charset='utf-8')
-meta(name='X-UA-Compatible', content='IE=edge')
-meta(name='viewport', content='width=device-width, initial-scale=1')
-meta(name="robots", content="index, follow")
+meta(name='X-UA-Compatible' content='IE=edge')
+meta(name='viewport' content='width=device-width, initial-scale=1')
+meta(name="robots" content="index, follow")
 
 title
     block site_title
@@ -9,10 +9,11 @@ title
 
 block description
     meta(name='description', content=config.description ? config.description : __('meta_description'))
-    
+
 
 link(rel='icon', href=url_for(theme.favicon))
-link(rel='stylesheet', href='https://unpkg.com/nanoreset@3.0.1/nanoreset.min.css')
+link(rel='stylesheet' href='https://unpkg.com/nanoreset@3.0.1/nanoreset.min.css')
 link(rel='stylesheet', href=url_for('css/theme.css'))
-link(rel='search', type='application/opensearchdescription+xml', href=url_for('atom.xml'), title=config.title)
-link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap')
+link(rel='stylesheet' href='https://unpkg.com/@waline/client@v2/dist/waline.css')
+link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap')
+link(rel='search' type='application/opensearchdescription+xml', href=url_for('atom.xml'), title=config.title)
