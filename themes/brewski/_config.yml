@@ -14,7 +14,7 @@ logo: /logo.svg
 
 # Valine
 valine:
-  serverURLs: https://comment.allwens.work/
+  serverURLs: https://comment.blog.allwens.work
 
 artitalk:
   appID: "BB47PurCV8enSBEjrXL7RSmz-MdYXbMMI"
