@@ -143,6 +143,8 @@ pwa:
         strategy: cacheFirst
       - pattern: !!js/regexp /.*fonts.*/ # 字体（jetbrains mono）
         strategy: cacheFirst
-      - pattern: !!js/regexp /\// # 其它页面
+      - pattern: !!js/regexp /^(http|https):\/\/blog\.allwens\.work(\/.*)?$/ # 页面内容
         strategy: fastest
+      - pattern: !!js/regexp /\// # 其它请求
+        strategy: networkOnly
   priority: 5
