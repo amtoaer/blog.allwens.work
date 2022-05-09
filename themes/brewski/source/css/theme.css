@@ -790,4 +790,9 @@ pre .strong {
 	--waline-active-color: #9e1900 !important;
 	--waline-badge-color: #ae0000 !important;
 	--waline-font-size: 1.3rem !important;
-  }
+}
+
+.wl-header input{
+	font-size: .625em !important;
+	font-weight: 500 !important;
+}
