@@ -135,10 +135,14 @@ pwa:
         - /
       posts: 5
     opts:
-      networkTimeoutSeconds: 5
+      networkTimeoutSeconds: 3
     routes:
-      - pattern: !!js/regexp /.*\.(js|css|jpg|jpeg|png|gif|svg)$/
+      - pattern: !!js/regexp /^(chrome-extension).*$/ # chrome extension请求不能缓存，只使用网络
+        strategy: networkOnly
+      - pattern: !!js/regexp /.*\.(js|css|jpg|jpeg|png|gif|svg|json)$/ # 常用的静态文件
         strategy: cacheFirst
-      - pattern: !!js/regexp /\//
-        strategy: networkFirst
+      - pattern: !!js/regexp /.*fonts.*/ # 字体（jetbrains mono）
+        strategy: cacheFirst
+      - pattern: !!js/regexp /\// # 其它页面
+        strategy: fastest
   priority: 5
