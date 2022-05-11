@@ -43,6 +43,11 @@ friends:
         img: //cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/basic/favicon.ico
         name: ybx’s blog
         desc: 即使天无雨，我亦留此地
+    - 
+        url: https://aber.sh/
+        img: //rmt.ladydaily.com/fetch/allwens-work/storage/portrait.jpg
+        name: Aber's BLOG
+        desc: 我与我周旋久，宁作我。
 
 ---
 
