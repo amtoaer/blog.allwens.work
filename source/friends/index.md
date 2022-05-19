@@ -48,6 +48,11 @@ friends:
         img: //rmt.ladydaily.com/fetch/allwens-work/storage/portrait.jpg
         name: Aber's BLOG
         desc: 我与我周旋久，宁作我。
+    - 
+        url: https://qiuyedx.com
+        img: //qiuyedx.com/wp-content/uploads/2021/11/logo_noText.png
+        name: 秋夜 Dx の ブログ☕
+        desc: 人生平凡无奇，才能在故事中做一场美梦。
 
 ---
 
