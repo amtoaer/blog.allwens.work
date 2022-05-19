@@ -50,7 +50,7 @@ friends:
         desc: 我与我周旋久，宁作我。
     - 
         url: https://qiuyedx.com
-        img: //qiuyedx.com/wp-content/uploads/2021/11/logo_noText.png
+        img: //qiuyedx.com/wp-content/uploads/2022/05/2C441EA3-68E2-4341-B66B-27A301CF0BFB-768x878.jpeg
         name: 秋夜 Dx の ブログ☕
         desc: 人生平凡无奇，才能在故事中做一场美梦。
 
