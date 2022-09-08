@@ -58,6 +58,11 @@ friends:
         img: //www.tserluir.work/img/avatar.jpg
         name: Tserluir
         desc: 经历八面来风，方能驾舟而行
+    - 
+        url: https://linuxnbg.com/
+        img: //core.linuxnbg.com/image/mm.svg
+        name: chengchenghao
+        desc: 
 
 ---
 
