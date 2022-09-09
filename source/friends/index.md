@@ -62,7 +62,7 @@ friends:
         url: https://linuxnbg.com/
         img: //core.linuxnbg.com/image/mm.svg
         name: chengchenghao
-        desc: 
+        desc: 时间是单行道，过去了，回不来。
 
 ---
 
