@@ -1,5 +1,5 @@
 ---
-title: WSL2 启动时自动将 IP 写入 Windows hosts 文件
+title: Windows 简单访问 WSL2
 date: 2022-11-29 12:12:06
 tags: ['wsl']
 ---
@@ -14,6 +14,8 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 这时在 Windows 上访问 `localhost:8000`是可以正常打开的。但在某些其它场景（如数据库连接时），该映射又会失效。可能是因为 WSL 默认只映射了 http 服务的端口？（存疑）
 
 为了解决上述问题，我们需要一种手段来确保 Windows 主机能够轻松访问到 WSL。以下列举三种解决方式，并最后详细描述我的解决方案。
+
+<!--more-->
 
 ## 手动查找 WSL 的局域网 IP，并使用该 IP 访问
 
