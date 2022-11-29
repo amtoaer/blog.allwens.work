@@ -60,7 +60,7 @@ eth0: .......
 
 ### 思路 2
 
-思路 2 的实现较少，因为在过去 WSL 中没有一种行之有效的“开机自启”方法。但该障碍已随着 [WSL 对 systemd 的支持](https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/)而消失不见，因此我手撸了一个[采用这种方式的项目](https://github.com/shayne/go-wsl2-host)。
+思路 2 的实现较少，因为在过去 WSL 中没有一种行之有效的“开机自启”方法。但该障碍已随着 [WSL 对 systemd 的支持](https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/)而消失不见，因此我手撸了一个[采用这种方式的项目](https://github.com/amtoaer/wsl2-automatic-hosts)。
 
 要使用该项目，对于 Arch Linux：
 
