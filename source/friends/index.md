@@ -29,11 +29,6 @@ friends:
         name: Neboer
         desc: Neboer's Blog isn't Only About Tech!
     - 
-        url: https://pwd.moe/
-        img: //cdn.jsdelivr.net/gh/alca7raz/bloggy_archives/img/me.jpg
-        name: Pages@Alca7raz
-        desc: NwN Technology
-    - 
         url: https://yl4869.github.io/
         img: //cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/friends/yunlang.jpg
         name: 云狼
