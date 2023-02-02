@@ -2,9 +2,9 @@ script(src='https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js')
 
 script.
     var loadWaline = ()=>{
-        if (typeof waline !== "undefined"){
+        if (typeof waline !== 'undefined'){
             waline.update()
-        }else if (typeof Waline !== "undefined") {
+        }else if (typeof Waline !== 'undefined') {
             const waline = Waline.init({
                 el: '#vcomment',
                 serverURL: '#{theme.valine.serverURLs}',
@@ -20,6 +20,12 @@ script.
             appId: '#{theme.artitalk.appID}',
             appKey: '#{theme.artitalk.appKey}',
         })
+    }
+
+    var loadFancybox = ()=>{
+        Fancybox.bind('.post-content img', {
+            hideScrollbar: false
+        });
     }
 
     var scrollSmoothly = (position)=>{
@@ -46,33 +52,38 @@ script.
     (function () {
         var valine = document.createElement('script'); valine.async = true;
         var artitalk = document.createElement('script');artitalk.async = true;
+        var fancybox = document.createElement('script');artitalk.async = true;
         valine.src = 'https://unpkg.com/@waline/client@v2/dist/waline.js';
-        artitalk.src = 'https://cdn.jsdelivr.net/gh/amtoaer/Artitalk@test/dist/js/artitalk.min.js';
+        artitalk.src = 'https://cdn.jsdelivr.net/gh/amtoaer/cdn/js/artitalk.min.js';
+        fancybox.src = 'https://cdn.jsdelivr.net/gh/amtoaer/cdn/js/fancybox.umd.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(valine);
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(artitalk);
-        if (document.getElementById("vcomment")!==null){
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(fancybox);
+        if (document.getElementById('vcomment')!==null){
             valine.onload = loadWaline
         }
         if (document.getElementById('artitalk_main')!==null){
             artitalk.onload = loadArtitalk
         }
+        if (document.getElementsByClassName('post-content')!==null){
+            fancybox.onload = loadFancybox
+        }
     })();
 
     var progressTimer;
-    var loadingBar = document.querySelector(".loading-bar");
-    var progress = document.querySelector(".loading-bar .progress");
+    var loadingBar = document.querySelector('.loading-bar');
+    var progress = document.querySelector('.loading-bar .progress');
 
     document.addEventListener('DOMContentLoaded', function() {
         Barba.Pjax.start()
     })
 
     Barba.Dispatcher.on('linkClicked',()=>{
-
         var loadingBarWidth = 20;
         var MAX_LOADING_WIDTH = 95;
 
-        loadingBar.classList.add("loading");
-        progress.style.width = loadingBarWidth + "%";
+        loadingBar.classList.add('loading');
+        progress.style.width = loadingBarWidth + '%';
 
         clearInterval(progressTimer);
         progressTimer = setInterval(()=> {
@@ -80,15 +91,15 @@ script.
             if (loadingBarWidth > MAX_LOADING_WIDTH) {
             loadingBarWidth = MAX_LOADING_WIDTH;
             }
-            progress.style.width = loadingBarWidth + "%";
+            progress.style.width = loadingBarWidth + '%';
         }, 500);
     })
 
     Barba.Dispatcher.on('transitionCompleted',()=>{
         clearInterval(progressTimer);
 
-        progress.style.width = "100%";
-        loadingBar.classList.remove("loading");
+        progress.style.width = '100%';
+        loadingBar.classList.remove('loading');
 
         setTimeout(()=> {
             progress.style.width = 0;
@@ -96,10 +107,14 @@ script.
 
         scrollSmoothly(0)
 
-        if (document.getElementById("vcomment")!==null){
+        if (document.getElementById('vcomment')!==null){
             loadWaline()
         }
-        if (document.getElementById('artitalk_main')!==null && typeof Artitalk !== "undefined"){
+        if (document.getElementById('artitalk_main')!==null && typeof Artitalk !== 'undefined'){
             loadArtitalk()
+        }
+        if (document.getElementsByClassName('post-content')!==null && typeof Fancybox !== 'undefined'){
+            Fancybox.destroy()
+            loadFancybox()
         }
     });
