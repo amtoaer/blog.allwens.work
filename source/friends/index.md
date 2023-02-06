@@ -9,28 +9,18 @@ friends:
         name: 契约
         desc: 编程大牛契约酱！
     - 
-        url: https://cnblogs.com/KwpAlpha/
-        img: //cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/friends/kwpalpha.jpg
-        name: 莱纳
-        desc: 某物联同学
-    - 
-        url: http://wp.fluctlight.xyz/
-        img: //cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/friends/fluctlight.jpg
-        name: fluctlight
-        desc: 写verilog的一个菜狗
-    - 
         url: https://nymrli.top/
-        img: //cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/friends/mrli.jpeg
+        img: //rmt.ladydaily.com/fetch/allwens-work/storage/mr.li.jfif
         name: Mr.li
         desc: 别装作很努力，因为结局不会陪你演戏
     - 
         url: https://neboer.site/
-        img: //cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/friends/neboer.jpg
+        img: //rmt.ladydaily.com/fetch/allwens-work/storage/neboer.jpg
         name: Neboer
         desc: Neboer's Blog isn't Only About Tech!
     - 
         url: https://yl4869.github.io/
-        img: //cdn.jsdelivr.net/gh/amtoaer/blogcdn@master/img/friends/yunlang.jpg
+        img: //rmt.ladydaily.com/fetch/allwens-work/storage/yunlang.jpg
         name: 云狼
         desc: fun forever
     - 
