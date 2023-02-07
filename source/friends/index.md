@@ -48,6 +48,11 @@ friends:
         img: //core.linuxnbg.com/image/mm.svg
         name: chengchenghao
         desc: 时间是单行道，过去了，回不来。
+    - 
+        url: https://lemoe.cn/
+        img: //rmt.ladydaily.com/fetch/allwens-work/storage/lemoe.jpg
+        name: 柠萌的赛博自留地
+        desc: 此情可待成追忆？只是当时已惘然。
 
 ---
 
